@@ -1,0 +1,14 @@
+{
+  "name": "bagelsmp-dashboard",
+  "version": "1.0.0",
+  "description": "Bagel SMP Economy and Auction Dashboard",
+  "main": "netlify/functions/dashboard.js",
+  "scripts": {
+    "build": "echo 'No build step required for static frontend'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Vedant Hanymant Pawale",
+  "license": "MIT"
+}
