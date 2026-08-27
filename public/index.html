@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bagel SMP Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Top Header -->
+    <header class="header">
+      <div class="brand">🥯 BAGEL SMP DASHBOARD</div>
+      <div id="server-status" class="status-badge">Checking...</div>
+    </header>
+
+    <div class="main-body">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h3>NAVIGATION</h3>
+        <ul>
+          <li class="active">Overview</li>
+          <li>Auctions</li>
+          <li>Orders</li>
+          <li>Bounties</li>
+        </ul>
+        <div class="api-card">
+          <h4>API STATUS</h4>
+          <p>Rate: <span id="rate-remaining">--</span> / 120</p>
+          <p>Reset: <span id="rate-reset">--</span>s</p>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="content">
+        <div class="user-strip">
+          <h2>Welcome back, <span id="player-name">...</span></h2>
+          <div class="balance-tag">Balance: $<span id="player-balance">0.00</span></div>
+        </div>
+
+        <!-- Live Auctions -->
+        <section class="panel">
+          <h3>⚡ LIVE AUCTIONS</h3>
+          <table>
+            <thead>
+              <tr><th>Item</th><th>Seller</th><th>Price</th><th>Time</th></tr>
+            </thead>
+            <tbody id="auctions-table">
+              <tr><td colspan="4">Loading listings...</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Your Orders -->
+        <section class="panel">
+          <h3>📦 ACTIVE ORDERS</h3>
+          <table>
+            <thead>
+              <tr><th>Type</th><th>Item</th><th>Qty</th><th>Price/ea</th></tr>
+            </thead>
+            <tbody id="orders-table">
+              <tr><td colspan="4">Loading orders...</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Bounties -->
+        <section class="panel">
+          <h3>🎯 TOP BOUNTIES</h3>
+          <div id="bounties-list" class="bounties-grid"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
